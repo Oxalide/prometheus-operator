@@ -448,7 +448,7 @@ func makeStatefulSetSpec(p v1alpha1.Prometheus, c *Config, ruleConfigMaps []*v1.
 							Handler: probeHandler,
 							// For larger servers, restoring a checkpoint on startup may take quite a bit of time.
 							// Wait up to 5 minutes.
-							InitialDelaySeconds: 300,
+							InitialDelaySeconds: 600,
 							PeriodSeconds:       5,
 							TimeoutSeconds:      probeTimeoutSeconds,
 							FailureThreshold:    10,
